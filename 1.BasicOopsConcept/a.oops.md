@@ -23,3 +23,16 @@
 > - Association: Object А knows about object B. Class A depends on B.
 > - Aggregation: Object А knows about object B, and consists of B. Class A depends on B.
 > - Composition: Object А knows about object B, consists of B, and manages B’s life cycle. Class A depends on B.
+
+- Design patterns are typical solutions to commonly occurring problems in software design.
+- They are like pre-made blue-prints that you can customize to solve a recurring design problem in your code.
+- Patterns are often confused with algorithms, because both concepts describe typical solutions to some known problems. While an algorithm always defines a clear set of actions that can achieve some goal, a pattern is a more high-level description of a solution. The code of the same pattern applied to two different programs may be different.
+
+## Classification of Patterns
+- Design patterns differ by their complexity, level of detail and scale of applicability to the entire system being designed. Lets take the analogy to road construction: you can make an intersection safer by either installing some traffic lights or building an entire multi-level interchange with underground passages for pedestrians.
+- The most universal and high-level patterns are architectural patterns. Developers can implement these patterns in virtual- ly any language. Unlike other patterns, they can be used to design the architecture of an entire application.
+- In addition, all patterns can be categorized by their intent, or purpose. Three main groups of patterns
+  - Creational patterns
+  - Structural patterns
+  - Behavioral patterns
+
