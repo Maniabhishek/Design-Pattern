@@ -9,3 +9,4 @@
 - Make the class that is a dependency implement this interface.
 - Now make the second class dependent on this interface rather than on the concrete class. You still can make it work with objects of the original class, but the connection is now much more flexible.
 
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/c1b796e4-76ea-4119-a6fd-748ed8b71a2a">
