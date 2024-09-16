@@ -14,6 +14,7 @@
 #### Example
 - Imagine that you need to create a catalog app for a car manufacturer. The company makes both cars and trucks; they can be either electric or gas; all models have either manual controls or an autopilot.
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/af3cb62d-72ff-472a-898c-7e83ee915289">
+
 - As you see, each additional parameter results in multiplying the number of subclasses. There’s a lot of duplicate code between subclasses because a subclass can’t extend two classes at the same time.
 - You can solve this problem with composition. Instead of car objects implementing a behavior on their own, they can delegate it to other objects.
 - The added benefit is that you can replace a behavior at runtime. For instance, you can replace an engine object linked to a car object just by assigning a different engine object to the car.
