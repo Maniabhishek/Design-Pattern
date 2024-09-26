@@ -5,7 +5,7 @@
 // subclass should extend the capability of parent class not narrow it down
 
 /*
-  suppose we have a class A , any code that take Object of A and later point of time we change this 
+  suppose we have a class A , there is some program which take Object of A and later point of time we change this 
   to object of B then the program should not break 
   so any class when we extend it then it should have all the capabilities of parent class.
   it should not happen that child class reduces its feature
@@ -45,7 +45,7 @@ class Bicycle implements Bike{
 }
 
 /*
-  now let say we have a code and it uses Motorcycle object and if we replaces bicycle Object then 
+  in the above we see that Motorcycle implemants Bike and has both the method , whereas Bicycle is also an another class which implements Bike but we know bicycle doesn't have Engine so it will throw error  
   our code will break since it doesn't follow the liskov principle , above code is narrowing down the parent class 
   
 */
