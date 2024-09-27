@@ -63,6 +63,10 @@ interface Observer {
  */
 
 class ConcreteObserverA implements Observer {
+    // subject: Subject
+    // constructor(subject: Subject){
+    //     this.subject = subject
+    // }
     public update(subject: Subject): void {
         if(subject instanceof ConcreteSubject && subject.state <3) {
             console.log('ConcreteObserverA: Reacted to the event')
@@ -85,6 +89,7 @@ class ConcreteObserverB implements Observer {
 export function Call_executeObserverPattern(){
 
     const subject = new ConcreteSubject()
+    // const observerA = new ConcreteObserverA(subject)
     const observerA = new ConcreteObserverA()
     const observerB = new ConcreteObserverB()
     subject.attach(observerA)
