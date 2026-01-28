@@ -104,3 +104,45 @@ class CacheStore extends FileStore {
 }
 
 ```
+#### how is above violating
+- Base promises success
+- Subclass violates promise
+
+
+### Example 3: Throwing Unexpected Exceptions ❌
+```ts
+class Bird {
+  fly() {}
+}
+
+class Penguin extends Bird {
+  fly() {
+    throw new Error("Can't fly");
+  }
+}
+
+```
+#### ❌ Why?
+- Client expects fly() to work
+
+### Correct LSP Design
+```ts
+interface Bird {}
+
+interface FlyingBird extends Bird {
+  fly(): void;
+}
+
+class Sparrow implements FlyingBird {
+  fly() {}
+}
+
+class Penguin implements Bird {
+  swim() {}
+}
+
+Now:
+
+```
+- No false promises
+- No broken substitutions
