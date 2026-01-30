@@ -190,3 +190,18 @@ class FakeEmailService implements IEmail {
 const u = new UserService2(new FakeEmailService())
 u.createUser()
 ```
+- No SMTP
+- No network
+- Fast tests
+
+### Subtle DIP Violation
+```ts
+interface Database {
+  connect(): void;
+}
+
+class OrderService {
+  constructor(private db: MySQLDatabase) {} // ❌
+}
+
+```
