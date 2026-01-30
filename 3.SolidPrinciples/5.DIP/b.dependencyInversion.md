@@ -195,6 +195,8 @@ u.createUser()
 - Fast tests
 
 ### Subtle DIP Violation
+- ⚠ Interface exists, but not used
+- ❌ DIP still violated
 ```ts
 interface Database {
   connect(): void;
