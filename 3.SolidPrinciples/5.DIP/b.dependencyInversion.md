@@ -165,7 +165,7 @@ class SendgridEmail implements IEmail {
     }
 }
 
-class UserService2 {
+class UserService {
     private emailService: IEmail
 
     constructor(emailService: IEmail){
@@ -176,4 +176,17 @@ class UserService2 {
         this.emailService.send()
     }
 }
+```
+
+### DIP Enables Testability (Huge Benefit)
+- Unit test without real dependencies
+```ts
+class FakeEmailService implements IEmail {
+    send(){
+        console.log('fake email: fake')
+    }
+}
+
+const u = new UserService2(new FakeEmailService())
+u.createUser()
 ```
