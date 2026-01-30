@@ -207,3 +207,24 @@ class OrderService {
 }
 
 ```
+
+#### DIP + Clean Architecture
+- DIP is the backbone of:
+- Clean Architecture
+- Hexagonal Architecture
+- Onion Architecture
+- Rule:
+    - Inner layers must not know outer layers
+
+#### When NOT to Apply DIP
+- Don’t over-engineer:
+- One-off scripts
+- Simple utilities
+- Code that won’t change
+- Use DIP where change is expected
+
+#### How to Spot DIP Violations Quickly
+- Ask:
+    - Does business logic import DB / HTTP / SDK directly?
+    - Can I swap implementation without touching core code?
+    - Is unit testing painful?
