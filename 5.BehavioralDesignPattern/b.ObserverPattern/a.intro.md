@@ -149,3 +149,14 @@ orderService.addObserver(new AnalyticsService());
 
 orderService.placeOrder("ORD-1");
 ```
+
+### When to Use Observer Pattern
+- ✅ Use when:
+    - One event → many reactions
+    - Want loose coupling
+    - Side effects must be extensible
+    - Event-driven systems
+- ❌ Avoid when:
+    - Only one listener
+    - Order of execution is critical
+    - Simple direct call is enough
