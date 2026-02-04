@@ -12,8 +12,7 @@
 ### 1️⃣ Simple Real-World Example (Coffee ☕)
 - Base coffee: ₹100
 - Add-ons:
-    - Milk (+₹20)
-    - Sugar (+₹10)
+    - Milk 
     - Whipped Cream (+₹30)
 
 ### ❌ Without Decorator (Bad)
