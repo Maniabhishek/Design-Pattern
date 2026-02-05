@@ -25,3 +25,7 @@ function getVehicle(type: string) {
 }
 
 ```
+#### Problems:
+- Creation logic everywhere
+- Violates Open/Closed Principle
+- Hard to scale
