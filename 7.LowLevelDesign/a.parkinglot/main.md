@@ -1,3 +1,41 @@
+### 1️⃣ How to START in an Interview (Very Important)
+- “Designing a Parking Lot”
+
+### ✅ Step 1: Ask Clarifying Questions
+
+- “Before designing, I’d like to clarify requirements.”
+- What vehicle types? (Car, Bike, Truck?)
+- Multiple floors?
+- Entry & Exit gates?
+- Payment needed?
+- Spot assignment automatic or manual?
+- Concurrency? (multiple cars entering)
+
+### 2️⃣ Final Assumptions 
+- For this design, we’ll assume:
+    - Vehicle types: Bike, Car, Truck
+    - Spot types: BikeSpot, CarSpot, TruckSpot
+    - Multiple floors
+    - Automatic spot assignment
+    - Entry & Exit
+    - Payment based on time
+
+### 3️⃣ Core Design Principles (Say This)
+- “We’ll follow SOLID principles and keep the system extensible.”
+- Patterns used:
+    - Strategy → Pricing
+    - Factory → Vehicle creation
+    - Singleton → ParkingLot
+    - Abstraction → Vehicle, ParkingSpot
+### 4️⃣ Core Entities (UML-Level Thinking)
+- Main Classes
+- ParkingLot (Singleton)
+- ParkingFloor
+- ParkingSpot
+- Vehicle
+- Ticket
+- PaymentStrategy
+
 ```ts
 import crypto from "crypto"
 
