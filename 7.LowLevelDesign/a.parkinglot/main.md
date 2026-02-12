@@ -1,5 +1,4 @@
-### 1️⃣ How to START in an Interview (Very Important)
-- “Designing a Parking Lot”
+### “Designing a Parking Lot”
 
 ### ✅ Step 1: Ask Clarifying Questions
 
