@@ -170,3 +170,42 @@ export function CallBuildingElevator(){
     controller.step()
 }
 ```
+
+### Scheduling Strategy Improvement
+- Instead of nearest:
+  - Use Strategy Pattern:
+```ts
+interface SchedulingStrategy {
+    findElevator(elevators: Elevator[], request: Request): Elevator;
+
+}
+```
+- Implement:
+  - NearestStrategy
+  - ScanAlgorithm
+  - LookAlgorithm
+  - AI based optimization
+  - Then inject into controller.
+
+
+### Scalability Concerns
+- In real production:
+- Requests come from distributed systems
+- Controller may run on multiple nodes
+- Use message queue (Kafka)
+- Persist state in DB
+- Leader election for controller
+
+### Edge Cases
+- Elevator full
+- Fire alarm
+- Emergency override
+- Power failure
+- Door obstruction
+- Mentioning these = huge interview brownie points.
+
+### Concurrency Handling
+- In real system:
+- Multiple threads update elevator state
+- Use locks / mutex
+- Or event-driven model
