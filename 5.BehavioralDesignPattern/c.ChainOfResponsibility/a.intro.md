@@ -79,3 +79,74 @@ export function CallLogger(){
 - so we first created an abstract class with a log method
 - and then we created a different level log class and their constructor initilizes next class in chain
 - this way it keeps checking the chain of funcitons
+
+
+### another way of creating chains
+```ts
+enum LogLevel {
+    WARN = 1,
+    INFO = 2,
+    DEBUG = 3
+}
+
+abstract class Logger {
+    logLevel: LogLevel
+    next: Logger | null = null
+    constructor(logLevel: LogLevel){
+        this.logLevel = logLevel
+    }
+
+    setNext(logger: Logger){
+        this.next = logger
+        return logger
+    }
+
+    log(loglevel: LogLevel, message: string){
+        if(loglevel === this.logLevel){
+            this.write(loglevel, message)
+        }
+        if(this.next){
+            this.next.log(loglevel, message)
+        }
+    }
+
+    abstract write(logLevel: LogLevel, message: string): void
+}
+
+class InfoLogger extends Logger{
+    write(logLevel: LogLevel, message: string): void {
+        if(logLevel === LogLevel.INFO){
+            console.log('INFO: ', message)
+        }
+    }
+}
+
+class DebugLogger extends Logger{
+    write(logLevel: LogLevel, message: string): void {
+        if(logLevel === LogLevel.DEBUG){
+            console.log('Debug: ', message)
+        }
+    }
+}
+
+class WarnLogger extends Logger{
+    write(logLevel: LogLevel, message: string): void {
+        if(logLevel === LogLevel.WARN){
+            console.log('WARN: ', message)
+        }
+    }
+}
+
+export function CallLogger2(){
+    const info = new InfoLogger(LogLevel.INFO)
+    const debug = new DebugLogger(LogLevel.DEBUG)
+    const warn = new WarnLogger(LogLevel.WARN)
+
+    info.setNext(debug).setNext(warn)
+
+    info.log(LogLevel.INFO, "this is INFO ")
+    info.log(LogLevel.DEBUG, "this is DEBUG ")
+    info.log(LogLevel.WARN, "this is WARN ")
+}
+
+```
