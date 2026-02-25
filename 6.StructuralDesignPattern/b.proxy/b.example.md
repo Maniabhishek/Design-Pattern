@@ -35,3 +35,7 @@ export function CallFileService(){
     file.downloadFile()
 }
 ```
+
+- in the above code, we have file service interface and its implementation
+- then what we want is to add access authorization of user , whether we should allow user to download file or not 
+
