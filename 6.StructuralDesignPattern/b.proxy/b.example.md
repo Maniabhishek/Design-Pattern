@@ -37,5 +37,34 @@ export function CallFileService(){
 ```
 
 - in the above code, we have file service interface and its implementation
-- then what we want is to add access authorization of user , whether we should allow user to download file or not 
+- then what we want is to add access authorization of user , whether we need to verify user before downloading file
+
+```ts
+interface IImage {
+    display(): void
+}
+
+class Image implements IImage {
+    fileName: string
+    constructor(name: string){
+        this.fileName = name
+        console.log('downloading file')
+    }
+
+    display(){
+        console.log('image here: ', this.fileName)
+    }
+}
+
+class ImageProxy implements IImage {
+    imageObj: IImage | null = null
+    constructor(){}
+    display(){
+        if(!this.imageObj){
+            this.imageObj = new Image("abc.com")
+        }
+        this.imageObj.display()
+    }
+}
+```
 
