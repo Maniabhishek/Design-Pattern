@@ -68,3 +68,11 @@ class ImageProxy implements IImage {
 }
 ```
 
+### Output Explanation
+- When created:
+    - No heavy loading
+- When display() first called:
+    - Loads image
+- Second time:
+-    Uses cached object
+- This is Virtual Proxy.
