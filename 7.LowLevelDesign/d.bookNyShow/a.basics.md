@@ -10,3 +10,5 @@
 - seats
 - booking payment
 - show
+
+<img width="787" height="775" alt="image" src="https://github.com/user-attachments/assets/bf48304c-8bf2-493f-a51c-92de32fb6e86" />
