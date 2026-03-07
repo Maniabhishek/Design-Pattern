@@ -11,4 +11,5 @@
 - booking payment
 - show
 
-<img width="787" height="775" alt="image" src="https://github.com/user-attachments/assets/bf48304c-8bf2-493f-a51c-92de32fb6e86" />
+<img width="812" height="724" alt="image" src="https://github.com/user-attachments/assets/342d00cd-3c24-4724-abb2-a188ff6c4ce0" />
+
