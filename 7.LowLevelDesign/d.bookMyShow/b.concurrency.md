@@ -13,4 +13,4 @@
 
 ### optimistic approach 
 - now two or more transaction starts , we wont immediately take the lock on the seat but instead both the transaction can start the process , and at the time of update we will lock the seat
-- so how exactly we will do it , we will use versioning initially lets say that a seat will have a v1 version 
+- so how exactly we will do it , we will use versioning, initially lets say that a seat has v1 version , when two of the request reads the information about this seat, they will both get the same seat as vacant, now one of the user tries to book, the moment we try and update the seat as booked we immediately lock the seat, and also update the version, now if any other request comes to update it will see the version has been updated then we wont allow user to book the seat even when the seat is not booked (could be a situation when ticket is cancelled)
