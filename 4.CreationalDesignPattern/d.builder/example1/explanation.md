@@ -1,1 +1,3 @@
-
+- whenever you see , new User(id, name, age, email, height, weight, profilePicture), so many arguments to in order to create a user object, in such a case we can utilize builder design pattern
+- so we took a similar example where we created a userBuilder with a set of method setting those variabled seperately and each methods returns back the UserBuilder object
+- in example 2 we will see how we can utilize it to create different types of users
