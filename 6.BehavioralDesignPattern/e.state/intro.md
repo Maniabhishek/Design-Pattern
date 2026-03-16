@@ -1,1 +1,4 @@
-
+- this is a structural design pattern
+- whenever you see different operations are dependent on state of the application , you can think of implmenting state design pattern
+- for example, TV when off , you can only switch it on, once you click on then you can change channel , switch to any application , increase or decrease volume and many otheres , along with switching off
+- similary we can think of vending machine 
