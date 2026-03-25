@@ -16,7 +16,7 @@ class SMSNotification extends Notification {
 
 - parent allows any message but chlid restricts it , Behavioral change -> LSP violation
 
-```
+```ts
 interface Notification {
   send(message: string): void;
 }
