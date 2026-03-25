@@ -16,6 +16,8 @@ A subclass breaks LSP if it:
 - ❌ Changes meaning of method
 - ❌ Violates invariants
 
+### above is exaplained with examples in next files
+
 ### Classic LSP Violation (Rectangle–Square Problem)
 ```ts
 class Rectangle {
