@@ -9,6 +9,12 @@ then any code using T should work correctly with S without knowing the differenc
 - It is about behavior
 - Your code can compile perfectly and still violate LSP.
 
+A subclass breaks LSP if it:
+- ❌ Throws new exceptions not expected
+- ❌ Does nothing when parent promised action
+- ❌ Restricts input more than parent
+- ❌ Changes meaning of method
+- ❌ Violates invariants
 
 ### Classic LSP Violation (Rectangle–Square Problem)
 ```ts
