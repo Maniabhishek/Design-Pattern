@@ -123,7 +123,9 @@ class Penguin extends Bird {
 
 ```
 #### ❌ Why?
+- This breaks LSP because:
 - Client expects fly() to work
+- Penguin cannot replace Bird
 
 ### Correct LSP Design
 ```ts
