@@ -1,0 +1,6 @@
+- DRY (Dont Repeat Yourself, It means that each piece of of knowledge or logic should have single unambiguous representation within the system)
+  - Reduces redundancy
+  - Easier Maintenance
+  - Single Point of change 
+- KISS (Keep It simple, Stupid) : design should always be kept as simple as possible. Complexity should only be introduced when absolutely necessary
+- YAGNI - (You aren't gonna need it) - always implement things when you actually need them, never when you just foresee that you might need them. 
