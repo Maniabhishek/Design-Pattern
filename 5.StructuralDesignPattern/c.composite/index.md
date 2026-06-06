@@ -1,0 +1,1 @@
+- the composite DP is a structural DP which organises the object into tree like structure
