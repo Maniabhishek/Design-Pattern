@@ -20,4 +20,40 @@
 - doing so , if you have so much of thread and context switching is happening freqeuently then it will be a performance degradation
 
 ### What is multithreading
-- multithreading is the ability of a program to run multiple threads (independent tasks) concurrently either via context switching or trully in parallel (multiple cores)
+- multithreading is the ability of a program to run multiple threads (independent tasks) concurrently either via context switching or trully in parallel (multiple cores), eg., lets say when you order food, billing , eta , invoicing these all can be done concurrently
+#### Each threads 
+- runs independently
+- shares the same memory space
+- performs a specific task
+
+#### why use threads ?
+- better performance
+- non blocking
+- resource sharing
+- scalability in backend services
+
+### concurrency and parallelism
+- means multiple tasks making progress over time, but not necessarily at the same exact time
+- can work with one core
+- task appear to run at the same time 
+- parallelism where have 8 task with 8 cores executing each at the same time
+
+### Shared memory vs Isolated memory
+- thread are given shared memory and process are given isolated memory
+
+### when to use Thread and Process
+- threads
+  - tasks need to share data
+  - high performance is needed
+  - tightly coupled behaviour
+  - responsiveness is key
+  - tasks are part of some logic
+- Process
+  - process when require isolation(like postgress)
+  - One crash shouldn't affect other
+  - security boundaries needed
+  - different tech stack
+- example lets say an app with multiple profile , P1, P2, P3 all these can have processes
+
+
+
