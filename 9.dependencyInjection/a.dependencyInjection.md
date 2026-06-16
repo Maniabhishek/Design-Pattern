@@ -1,3 +1,4 @@
+- dependency injection is design pattern in which an object receives its dependencies from an external source rather than creating them itself, In simple terms dont new the dependency but inject it 
 - problem: assume you have order service in which you have inventoryService, paymentservice, NotificationService, below is the code
 
 ```
