@@ -37,14 +37,22 @@
 
 > 
 
-#### lets follow the steps we are starting with *identify core entities*
+#### step 1: lets follow the steps we are starting with *identify core entities*
 - core entities
 <img width="400" height="564" alt="image" src="https://github.com/user-attachments/assets/dfc41abd-246f-4279-8320-b24af283cdb7" />
 - some other entities
 <img width="360" height="564" alt="image" src="https://github.com/user-attachments/assets/7508d425-5b3d-4641-b0c2-bce93ff4545b" />
 
+#### Step 2: Discuss interaction flow
+- lets see the flows
+  - Entry flow:
+    - Driver enters, get a slot , generate ticket
+  - Exit flow:
+    - Driver exits, shows the ticket, price computed, (minimum of flat or hourly rate pricing), pays the amount (with retries if it fails), get the receipt, released, ticket deactivate to avoid multiple entry
+  - Admin flow:
+    - Admin requests to add floor, add slots, or update pricing 
 
-
+> at this point start thinking about the classes, what all classes you are going to need
 
 
 
