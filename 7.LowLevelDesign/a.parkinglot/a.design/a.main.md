@@ -37,13 +37,13 @@
 
 > 
 
-#### step 1: lets follow the steps we are starting with *identify core entities*
+#### step 2: lets follow the steps we are starting with *identify core entities*
 - core entities
 <img width="400" height="564" alt="image" src="https://github.com/user-attachments/assets/dfc41abd-246f-4279-8320-b24af283cdb7" />
 - some other entities
 <img width="360" height="564" alt="image" src="https://github.com/user-attachments/assets/7508d425-5b3d-4641-b0c2-bce93ff4545b" />
 
-#### Step 2: Discuss interaction flow
+#### Step 3: Discuss interaction flow
 - lets see the flows
   - Entry flow:
     - Driver enters, get a slot , generate ticket
@@ -53,6 +53,27 @@
     - Admin requests to add floor, add slots, or update pricing 
 
 > at this point start thinking about the classes, what all classes you are going to need
+
+#### Step 4: design class structure and relationships
+- Architectural Layers:
+  - client/UI: Controller Layer (HTTP/API) -> Service Layer -> Repository Layer -> Domain Layer
+- Controllers:
+  1. Entry Controller
+    - enterVehicle(licenseNumber string, vehicleType: VehicleType): EntryResult
+  2. Exist Controller
+    - exitVehicle(uuid ticketId): ExitResult
+  3. AdminController
+    - addFloor(floorNumber: number)
+    - addSlot(floorNumber: number, slotType VehicleType)
+    - updatePricing(vehicleType: VehicleType, hourlyRate: number, flatRate: number)
+    - updateFlatPricing(vehicleType: VehicleType, flatRate: number)
+    - updateHourlyPricing(vehicleType: VehicleType, ratePerHour: number)
+
+- Designing SERVICES
+1. Ticket Service
+   - adf
+
+
 
 
 
