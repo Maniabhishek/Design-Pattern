@@ -57,7 +57,8 @@
 #### Step 4: design class structure and relationships
 - Architectural Layers:
   - client/UI: Controller Layer (HTTP/API) -> Service Layer -> Repository Layer -> Domain Layer
-- Controllers:
+
+##### Controllers:
   1. Entry Controller
     - enterVehicle(licenseNumber string, vehicleType: VehicleType): EntryResult
   2. Exist Controller
@@ -69,12 +70,45 @@
     - updateFlatPricing(vehicleType: VehicleType, flatRate: number)
     - updateHourlyPricing(vehicleType: VehicleType, ratePerHour: number)
 
-- Designing SERVICES
-1. Ticket Service
-   - adf
+##### Designing SERVICES
+1. TicketService
+   - generateTicket(vehicle: Vehicle, parkingSlot: ParkingSlot)
+   - getTicket(ticketId: string) Ticket
+2. SlotService:
+   - allocateSlot(slot: ParkingSlot)
+   - releaseSlot(slotid: string)
+3. PricingService
+   - computePrice(ticket: Ticket): number
+5. PaymentService
+   - processPayment(ticketid: string, amount: number)
+6. ReceiptService
+   - generateReceipt(ticket: Ticket, fee: number, paymentStatus: boolean)
+8. AdminService
+   - addFloor(floorNumber: int)
+   - addSlot(floorNumber: number, vehicleType: VehicleType)
+   - updatePricing(vehicleType: VehicleType, hourlyRate: number, flatRate: number)
+   - updateFlatPricing(vehicleType: VehicleType, flatRate: number)
+   - updateHourlyPricing(vehicleType: VehicleType, hourlyRate: number)
 
-
-
+##### Repositories
+1. TicketRepository
+    - save(ticket: Ticket) void
+    - findById(id: string): Ticket
+    - findActiveTickets(): List<Ticket>
+    - deactivateTicket(id: string): void
+2. SlotRepository
+    - updateSlot(parkingSlot: ParkingSlot)
+    - findById(id: string): ParkingSlow
+    - findAvailableSlot(vehicleType: VehicleType)
+3. Floor Repository
+    - save(floor: Floor)
+    - findByFloor(floorNumber: number): Floor
+4. PricingRuleRepository
+    - save(PricingRule rule)
+    - findByVehicleType(vehicleType: VehicleType)
+5. PaymentRepository
+    - save(payment: Payment): void
+    - findByTicketId(ticketid: string): Payment
 
 
 
