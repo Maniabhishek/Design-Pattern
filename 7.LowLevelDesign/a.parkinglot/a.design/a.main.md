@@ -110,5 +110,27 @@
     - save(payment: Payment): void
     - findByTicketId(ticketid: string): Payment
 
+##### so one more thing are we going to use any design pattern here , do you see yes there can be multiple payment methods, we can use paymentGateway Adapter
+- Interface:
+    - PaymentAdapter pay(ticketid: string, amount: number): boolean
+- Implementations:
+    - RazorpayAdapter implements PaymentGatewayAdapter
+    - StripeAdapter implements PaymentGatewayAdapter 
+
+#### Step 5: core use cases and methods
+- ENTRY USE CASE:
+    - enterVehicle() -> SlotService.allocateSlot() -> TicketService.generateTicket() -> TicketRepository.save() -> return EntryResult
+- EXIT USE CASE:
+    - exitVehicle() -> TicketService.getTicket() -> PricingService.calculateFee() -> PaymentService.processPayment() -> PaymentGatewayAdapter.pay() -> SlotService.releaseSlot() -> ReceiptService.generateReceipt() -> return ExitResult()
+- ADMIN USE CASES:
+    - addFloor() -> AdminService -> FloorRepository.save()
+    - addSlot() -> slotService.save()
+    - updatePricing() -> PricingRuleRepository.save()
+
+
+
+
+
+
 
 
